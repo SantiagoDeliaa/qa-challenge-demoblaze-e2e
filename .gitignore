@@ -1,0 +1,36 @@
+############################
+# Dependencias / build
+node_modules/
+dist/
+coverage/
+
+# Artefactos de Playwright
+playwright-report/   
+test-results/        
+
+# Artefactos de Allure
+allure-results/
+allure-report/
+#
+# Logs temporales
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Archivos de entorno
+.env
+.env.*.local
+
+# IDE / sistema operativo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Otros temporales
+*.tmp
+*.temp
+*.zip     
+

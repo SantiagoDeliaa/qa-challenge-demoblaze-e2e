@@ -1,0 +1,28 @@
+{
+  "name": "qa-challenge-demoblaze-e2e",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test:e2e": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:ui": "npx playwright test --ui",
+    "test:slow": "npx playwright test --headed --slow-mo 300",
+    "report:generate": "npx allure generate ./allure-results --clean -o ./allure-report",
+    "report": "npm run report:generate && npx allure open ./allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "playwright": "^1.53.1"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.8.0",
+    "@playwright/test": "^1.53.1",
+    "allure-playwright": "^3.3.0",
+    "uuid": "^11.1.0"
+  }
+}

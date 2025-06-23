@@ -14,6 +14,9 @@ export default defineConfig({
         screenshot: 'only-on-failure',
         video: 'retain-on-failure',
         viewport: { width: 1280, height: 720 },
+        launchOptions: {
+            slowMo: 200,   
+        },
     },
     projects: [
         {
@@ -24,6 +27,4 @@ export default defineConfig({
 });
 
 
-//npx playwright test
-//npx allure generate [allure-results] --clean -o allure-report
-//npx allure open allure-report
+

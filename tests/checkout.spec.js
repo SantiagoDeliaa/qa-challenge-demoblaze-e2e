@@ -11,18 +11,18 @@ test.describe('@e2e @checkout', () => {
         const prod   = new ProductPage(page);
         const cart   = new CartPage(page);
 
-        // 1) Add product
+        // Add product
         await home.goto('/');
         await home.selectProductByName(product.productName);
         await prod.addToCart();
 
-        // 2) Checkout
+        // Checkout
         await cart.goto();
         const modal = await cart.placeOrder();
         const order = createOrderData();
         await modal.completeForm(order);
 
-        // 3) Confirmation
+        // Confirmation
         await expect(modal.confirmation).toContainText('Thank you');
         await expect(modal.confirmation).toContainText(String(product.expectedPrice));
         await modal.okBtn.click();

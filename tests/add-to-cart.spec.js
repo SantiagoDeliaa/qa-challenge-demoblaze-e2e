@@ -10,14 +10,14 @@ test.describe('@smoke @addToCart', () => {
         const prod   = new ProductPage(page);
         const cart   = new CartPage(page);
 
-        // 1) Home
+        // Home
         await home.goto('/');
         await home.selectProductByName(product.productName);
 
-        // 2) Product detail
+        // Product detail
         await prod.addToCart();
 
-        // 3) Cart
+        // Cart
         await cart.goto();
         await expect(cart.rowFor(product.productName)).toBeVisible();
         await expect(cart.totalPrice).toHaveText(String(product.expectedPrice));

@@ -12,7 +12,7 @@ test.describe('@e2e @auth', () => {
         await auth.page.waitForTimeout(500);
         await auth.login(user);
 
-        // 3) Validate welcome message
+        // Validate welcome message
         await expect(auth.welcomeMsg).toContainText(user.username);
     });
 });
